@@ -1,0 +1,9 @@
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\bin\Debug\BoeNewClients.exe.config
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\bin\Debug\BoeNewClients.exe
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\bin\Debug\BoeNewClients.pdb
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.csproj.AssemblyReference.cache
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.Properties.Resources.resources
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.csproj.GenerateResource.cache
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.csproj.CoreCompileInputs.cache
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.exe
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.pdb
