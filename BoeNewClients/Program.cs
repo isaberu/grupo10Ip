@@ -17,7 +17,7 @@ namespace BoeNewClients
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new BoeNewClients());
-            //MessageBox.Show("HOla", "Hola", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
+
     }
 }

@@ -7,3 +7,4 @@ C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.csproj.
 C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.csproj.CoreCompileInputs.cache
 C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.exe
 C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.pdb
+C:\Users\IBENITO\Documents\Tecnica\BoeNewClients\obj\Debug\BoeNewClients.BoeNewClients.resources

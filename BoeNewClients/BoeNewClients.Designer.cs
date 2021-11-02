@@ -38,20 +38,23 @@ namespace BoeNewClients
             this.buscarClientes = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.resultados = new System.Windows.Forms.DataGridView();
+            this.diasMarcados = new System.Windows.Forms.GroupBox();
+            this.calendarioMarcado = new System.Windows.Forms.MonthCalendar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resultados)).BeginInit();
+            this.diasMarcados.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cargarClientes);
             this.groupBox1.Controls.Add(this.calendarioCargarClientes);
-            this.groupBox1.Location = new System.Drawing.Point(12, 17);
+            this.groupBox1.Location = new System.Drawing.Point(506, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1074, 73);
+            this.groupBox1.Size = new System.Drawing.Size(257, 108);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cargar nuevos clientes";
@@ -60,25 +63,26 @@ namespace BoeNewClients
             // 
             this.calendarioCargarClientes.Location = new System.Drawing.Point(22, 28);
             this.calendarioCargarClientes.Name = "calendarioCargarClientes";
-            this.calendarioCargarClientes.Size = new System.Drawing.Size(371, 20);
+            this.calendarioCargarClientes.Size = new System.Drawing.Size(202, 20);
             this.calendarioCargarClientes.TabIndex = 0;
             // 
             // cargarClientes
             // 
-            this.cargarClientes.Location = new System.Drawing.Point(444, 26);
+            this.cargarClientes.Location = new System.Drawing.Point(23, 63);
             this.cargarClientes.Name = "cargarClientes";
             this.cargarClientes.Size = new System.Drawing.Size(201, 21);
             this.cargarClientes.TabIndex = 1;
             this.cargarClientes.Text = "Cargar Clientes";
             this.cargarClientes.UseVisualStyleBackColor = true;
+            this.cargarClientes.Click += new System.EventHandler(this.cargarClientes_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Location = new System.Drawing.Point(14, 96);
+            this.groupBox2.Location = new System.Drawing.Point(12, 225);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1072, 445);
+            this.groupBox2.Size = new System.Drawing.Size(1094, 445);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar clientes";
@@ -89,7 +93,7 @@ namespace BoeNewClients
             this.groupBox3.Controls.Add(this.calendarioBuscador);
             this.groupBox3.Location = new System.Drawing.Point(12, 22);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1043, 76);
+            this.groupBox3.Size = new System.Drawing.Size(1067, 76);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscador";
@@ -115,7 +119,7 @@ namespace BoeNewClients
             this.groupBox4.Controls.Add(this.resultados);
             this.groupBox4.Location = new System.Drawing.Point(14, 112);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1040, 315);
+            this.groupBox4.Size = new System.Drawing.Size(1065, 315);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Resultados";
@@ -128,11 +132,30 @@ namespace BoeNewClients
             this.resultados.Size = new System.Drawing.Size(1004, 282);
             this.resultados.TabIndex = 0;
             // 
+            // diasMarcados
+            // 
+            this.diasMarcados.Controls.Add(this.calendarioMarcado);
+            this.diasMarcados.Location = new System.Drawing.Point(13, 13);
+            this.diasMarcados.Name = "diasMarcados";
+            this.diasMarcados.Size = new System.Drawing.Size(474, 212);
+            this.diasMarcados.TabIndex = 2;
+            this.diasMarcados.TabStop = false;
+            this.diasMarcados.Text = "Días cargados";
+            // 
+            // calendarioMarcado
+            // 
+            this.calendarioMarcado.CalendarDimensions = new System.Drawing.Size(2, 1);
+            this.calendarioMarcado.Location = new System.Drawing.Point(29, 25);
+            this.calendarioMarcado.Name = "calendarioMarcado";
+            this.calendarioMarcado.TabIndex = 0;
+            this.calendarioMarcado.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarioMarcado_DateChanged);
+            // 
             // BoeNewClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 553);
+            this.ClientSize = new System.Drawing.Size(1118, 682);
+            this.Controls.Add(this.diasMarcados);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "BoeNewClients";
@@ -143,6 +166,7 @@ namespace BoeNewClients
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.resultados)).EndInit();
+            this.diasMarcados.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -158,6 +182,8 @@ namespace BoeNewClients
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buscarClientes;
         private System.Windows.Forms.DateTimePicker calendarioBuscador;
+        private System.Windows.Forms.GroupBox diasMarcados;
+        private System.Windows.Forms.MonthCalendar calendarioMarcado;
     }
 }
 
