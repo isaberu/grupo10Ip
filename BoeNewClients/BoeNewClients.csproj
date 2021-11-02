@@ -52,6 +52,7 @@
     <Compile Include="BoeNewClients.Designer.cs">
       <DependentUpon>BoeNewClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="dataLayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BoeNewClients.resx">

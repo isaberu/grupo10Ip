@@ -30,21 +30,22 @@ namespace BoeNewClients
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.calendarioCargarClientes = new System.Windows.Forms.DateTimePicker();
             this.cargarClientes = new System.Windows.Forms.Button();
+            this.calendarioCargarClientes = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.calendarioBuscador = new System.Windows.Forms.DateTimePicker();
-            this.buscarClientes = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.resultados = new System.Windows.Forms.DataGridView();
+            this.dataGridResultados = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboProvincias = new System.Windows.Forms.ComboBox();
+            this.buscarClientes = new System.Windows.Forms.Button();
+            this.calendarioBuscador = new System.Windows.Forms.DateTimePicker();
             this.diasMarcados = new System.Windows.Forms.GroupBox();
             this.calendarioMarcado = new System.Windows.Forms.MonthCalendar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridResultados)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.diasMarcados.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,13 +60,6 @@ namespace BoeNewClients
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cargar nuevos clientes";
             // 
-            // calendarioCargarClientes
-            // 
-            this.calendarioCargarClientes.Location = new System.Drawing.Point(22, 28);
-            this.calendarioCargarClientes.Name = "calendarioCargarClientes";
-            this.calendarioCargarClientes.Size = new System.Drawing.Size(202, 20);
-            this.calendarioCargarClientes.TabIndex = 0;
-            // 
             // cargarClientes
             // 
             this.cargarClientes.Location = new System.Drawing.Point(23, 63);
@@ -75,6 +69,13 @@ namespace BoeNewClients
             this.cargarClientes.Text = "Cargar Clientes";
             this.cargarClientes.UseVisualStyleBackColor = true;
             this.cargarClientes.Click += new System.EventHandler(this.cargarClientes_Click);
+            // 
+            // calendarioCargarClientes
+            // 
+            this.calendarioCargarClientes.Location = new System.Drawing.Point(22, 28);
+            this.calendarioCargarClientes.Name = "calendarioCargarClientes";
+            this.calendarioCargarClientes.Size = new System.Drawing.Size(202, 20);
+            this.calendarioCargarClientes.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -87,8 +88,29 @@ namespace BoeNewClients
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar clientes";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dataGridResultados);
+            this.groupBox4.Location = new System.Drawing.Point(14, 112);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1065, 315);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Resultados";
+            // 
+            // dataGridResultados
+            // 
+            this.dataGridResultados.AllowUserToAddRows = false;
+            this.dataGridResultados.AllowUserToDeleteRows = false;
+            this.dataGridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridResultados.Location = new System.Drawing.Point(16, 19);
+            this.dataGridResultados.Name = "dataGridResultados";
+            this.dataGridResultados.Size = new System.Drawing.Size(1004, 282);
+            this.dataGridResultados.TabIndex = 0;
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comboProvincias);
             this.groupBox3.Controls.Add(this.buscarClientes);
             this.groupBox3.Controls.Add(this.calendarioBuscador);
             this.groupBox3.Location = new System.Drawing.Point(12, 22);
@@ -98,39 +120,34 @@ namespace BoeNewClients
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscador";
             // 
+            // comboProvincias
+            // 
+            this.comboProvincias.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.comboProvincias.FormattingEnabled = true;
+            this.comboProvincias.Location = new System.Drawing.Point(414, 29);
+            this.comboProvincias.Name = "comboProvincias";
+            this.comboProvincias.Size = new System.Drawing.Size(269, 21);
+            this.comboProvincias.Sorted = true;
+            this.comboProvincias.TabIndex = 2;
+            this.comboProvincias.Text = "- Elige una provincia -";
+            this.comboProvincias.SelectedIndexChanged += new System.EventHandler(this.comboProvincias_SelectedIndexChanged);
+            // 
+            // buscarClientes
+            // 
+            this.buscarClientes.Location = new System.Drawing.Point(739, 30);
+            this.buscarClientes.Name = "buscarClientes";
+            this.buscarClientes.Size = new System.Drawing.Size(195, 24);
+            this.buscarClientes.TabIndex = 1;
+            this.buscarClientes.Text = "Buscar";
+            this.buscarClientes.UseVisualStyleBackColor = true;
+            this.buscarClientes.Click += new System.EventHandler(this.buscarClientes_Click);
+            // 
             // calendarioBuscador
             // 
             this.calendarioBuscador.Location = new System.Drawing.Point(18, 30);
             this.calendarioBuscador.Name = "calendarioBuscador";
             this.calendarioBuscador.Size = new System.Drawing.Size(345, 20);
             this.calendarioBuscador.TabIndex = 0;
-            // 
-            // buscarClientes
-            // 
-            this.buscarClientes.Location = new System.Drawing.Point(435, 25);
-            this.buscarClientes.Name = "buscarClientes";
-            this.buscarClientes.Size = new System.Drawing.Size(195, 24);
-            this.buscarClientes.TabIndex = 1;
-            this.buscarClientes.Text = "Buscar";
-            this.buscarClientes.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.resultados);
-            this.groupBox4.Location = new System.Drawing.Point(14, 112);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1065, 315);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Resultados";
-            // 
-            // resultados
-            // 
-            this.resultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultados.Location = new System.Drawing.Point(16, 19);
-            this.resultados.Name = "resultados";
-            this.resultados.Size = new System.Drawing.Size(1004, 282);
-            this.resultados.TabIndex = 0;
             // 
             // diasMarcados
             // 
@@ -163,9 +180,9 @@ namespace BoeNewClients
             this.Load += new System.EventHandler(this.BoeNewClients_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.resultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridResultados)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.diasMarcados.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -178,12 +195,13 @@ namespace BoeNewClients
         private System.Windows.Forms.DateTimePicker calendarioCargarClientes;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView resultados;
+        private System.Windows.Forms.DataGridView dataGridResultados;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buscarClientes;
         private System.Windows.Forms.DateTimePicker calendarioBuscador;
         private System.Windows.Forms.GroupBox diasMarcados;
         private System.Windows.Forms.MonthCalendar calendarioMarcado;
+        private System.Windows.Forms.ComboBox comboProvincias;
     }
 }
 
